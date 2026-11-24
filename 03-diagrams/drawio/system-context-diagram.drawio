@@ -1,0 +1,127 @@
+<mxfile>
+  <diagram id="system-context" name="System Context Diagram">
+    <mxGraphModel dx="1330" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="0" page="1" pageScale="1" pageWidth="1330" pageHeight="760" math="0" shadow="0" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="owner" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="50" y="65" width="180" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="owner-head" value="" style="ellipse;aspect=fixed;fillColor=#08427B;strokeColor=#073B6F;" vertex="1" parent="owner">
+          <mxGeometry x="67" y="0" width="46" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="owner-body" value="Owner and Manager" style="rounded=1;arcSize=35;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="owner">
+          <mxGeometry x="0" y="52" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sales-clerk" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="50" y="304" width="180" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="sales-clerk-head" value="" style="ellipse;aspect=fixed;fillColor=#08427B;strokeColor=#073B6F;" vertex="1" parent="sales-clerk">
+          <mxGeometry x="67" y="0" width="46" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="sales-clerk-body" value="Sales Clerk" style="rounded=1;arcSize=35;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="sales-clerk">
+          <mxGeometry x="0" y="52" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="inventory-clerk" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="50" y="553" width="180" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="inventory-clerk-head" value="" style="ellipse;aspect=fixed;fillColor=#08427B;strokeColor=#073B6F;" vertex="1" parent="inventory-clerk">
+          <mxGeometry x="67" y="0" width="46" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="inventory-clerk-body" value="Inventory Clerk" style="rounded=1;arcSize=35;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="inventory-clerk">
+          <mxGeometry x="0" y="52" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="system" value="&lt;b style=&quot;font-size:20px&quot;&gt;Inventory and Invoicing System&lt;/b&gt;&lt;br&gt;&lt;br&gt;Tracks catalogue, stock, sales, invoices and payments for a single retail store." style="rounded=1;arcSize=12;html=1;whiteSpace=wrap;fillColor=#1168BD;strokeColor=#0B5298;strokeWidth=1.5;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;align=center;verticalAlign=middle;spacingLeft=18;spacingRight=18;" vertex="1" parent="1">
+          <mxGeometry x="630" y="300" width="360" height="200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="customer" value="" style="group;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1100" y="304" width="180" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer-head" value="" style="ellipse;aspect=fixed;fillColor=#08427B;strokeColor=#073B6F;" vertex="1" parent="customer">
+          <mxGeometry x="67" y="0" width="46" height="46" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer-body" value="Customer" style="rounded=1;arcSize=35;fillColor=#08427B;strokeColor=#073B6F;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="customer">
+          <mxGeometry x="0" y="52" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="manual-records" value="Paper and Spreadsheet Records" style="shape=rectangle;rounded=0;fillColor=#666666;strokeColor=#515151;fontColor=#FFFFFF;fontFamily=Arial;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="655" y="650" width="310" height="72" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="owner-to-system" value="Approves prices and adjustments" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.35;exitPerimeter=0;entryX=0;entryY=0.1;entryPerimeter=0;" edge="1" parent="1" source="owner-body" target="system">
+          <mxGeometry x="-0.44" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="145"/>
+              <mxPoint x="580" y="320"/>
+            </Array>
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="system-to-owner" value="Receivables, low stock, reports" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.25;exitPerimeter=0;entryX=1;entryY=0.75;entryPerimeter=0;" edge="1" parent="1" source="system" target="owner-body">
+          <mxGeometry x="0.44" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="542" y="350"/>
+              <mxPoint x="542" y="177"/>
+            </Array>
+            <mxPoint x="0" y="14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="sales-to-system" value="Sales, payments, customer records" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.35;exitPerimeter=0;entryX=0;entryY=0.42;entryPerimeter=0;" edge="1" parent="1" source="sales-clerk-body" target="system">
+          <mxGeometry x="-0.2" relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="system-to-sales" value="Invoices, balances, payment history" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.58;exitPerimeter=0;entryX=1;entryY=0.75;entryPerimeter=0;" edge="1" parent="1" source="system" target="sales-clerk-body">
+          <mxGeometry x="0.2" relative="1" as="geometry">
+            <mxPoint x="0" y="14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="inventory-to-system" value="Records receipts and adjustments" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.35;exitPerimeter=0;entryX=0;entryY=0.75;entryPerimeter=0;" edge="1" parent="1" source="inventory-clerk-body" target="system">
+          <mxGeometry x="-0.45" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="542" y="633"/>
+              <mxPoint x="542" y="450"/>
+            </Array>
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="system-to-inventory" value="Stock on hand, adjustment records" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.9;exitPerimeter=0;entryX=1;entryY=0.75;entryPerimeter=0;" edge="1" parent="1" source="system" target="inventory-clerk-body">
+          <mxGeometry x="0.45" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="480"/>
+              <mxPoint x="580" y="665"/>
+            </Array>
+            <mxPoint x="0" y="14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="sales-to-customer" value="Issues invoices, confirms payments" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="sales-clerk-body" target="customer-head">
+          <mxGeometry x="0.1" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="396"/>
+              <mxPoint x="20" y="38"/>
+              <mxPoint x="1190" y="38"/>
+            </Array>
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="system-to-manual-records" value="Replaces manual records" style="edgeStyle=none;rounded=0;dashed=1;dashPattern=6 4;startArrow=none;endArrow=block;endFill=1;endSize=8;strokeColor=#435466;strokeWidth=1.5;fontFamily=Arial;fontSize=14;fontColor=#273746;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitPerimeter=0;entryX=0.5;entryY=0;entryPerimeter=0;" edge="1" parent="1" source="system" target="manual-records">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="94" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

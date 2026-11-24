@@ -1,0 +1,242 @@
+<mxfile>
+  <diagram id="erd" name="Inventory and Invoicing ERD">
+    <mxGraphModel dx="1160" dy="880" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="0" page="1" pageScale="1" pageWidth="1160" pageHeight="880" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="customer" value="CUSTOMER" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="44" width="240" height="156" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer-1" value="customer_id (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="customer">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer-2" value="name" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="customer">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer-3" value="type" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="customer">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer-4" value="contact details" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="customer">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer-5" value="balance owed" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="customer">
+          <mxGeometry x="0" y="132" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sale" value="SALE" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="56" width="240" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-1" value="sale_id (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-2" value="customer_id (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-3" value="created_by user_id (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-4" value="sale date and time" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sale-item" value="SALE_ITEM" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="880" y="44" width="240" height="156" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-item-1" value="sale_item_id (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale-item">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-item-2" value="sale_id (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale-item">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-item-3" value="product SKU (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale-item">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-item-4" value="quantity" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale-item">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="sale-item-5" value="unit price" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="sale-item">
+          <mxGeometry x="0" y="132" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="invoice" value="INVOICE" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="344" width="240" height="156" as="geometry"/>
+        </mxCell>
+        <mxCell id="invoice-1" value="invoice_number (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="invoice">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="invoice-2" value="sale_id (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="invoice">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="invoice-3" value="issue date" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="invoice">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="invoice-4" value="calculated total" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="invoice">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="invoice-5" value="payment status" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="invoice">
+          <mxGeometry x="0" y="132" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="supplier-delivery" value="SUPPLIER_DELIVERY" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="528" y="356" width="240" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="supplier-delivery-1" value="supplier_delivery_id (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="supplier-delivery">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="supplier-delivery-2" value="product SKU (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="supplier-delivery">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="supplier-delivery-3" value="quantity received" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="supplier-delivery">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="supplier-delivery-4" value="receipt date" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="supplier-delivery">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="product" value="PRODUCT" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="880" y="296" width="240" height="252" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-1" value="SKU (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-2" value="name" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-3" value="category" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-4" value="unit" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-5" value="retail price" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="132" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-6" value="wholesale price" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="156" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-7" value="quantity on hand" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="180" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-8" value="reorder level" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="204" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="product-9" value="active status" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="product">
+          <mxGeometry x="0" y="228" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="payment" value="PAYMENT" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="40" y="671" width="240" height="156" as="geometry"/>
+        </mxCell>
+        <mxCell id="payment-1" value="payment_id (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="payment">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="payment-2" value="invoice_number (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="payment">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="payment-3" value="recorded_by user_id (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="payment">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="payment-4" value="amount" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="payment">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="payment-5" value="payment date and time" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="payment">
+          <mxGeometry x="0" y="132" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="user" value="USER" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="420" y="683" width="240" height="132" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-1" value="user_id (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="user">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-2" value="staff name" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="user">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-3" value="sign-in identifier" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="user">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-4" value="role" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="user">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="stock-adjustment" value="STOCK_ADJUSTMENT" style="swimlane;horizontal=1;startSize=36;rounded=0;collapsible=0;fillColor=#4472C4;swimlaneFillColor=#FFFFFF;strokeColor=#4472C4;fontColor=#FFFFFF;fontFamily=Arial;fontSize=15;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="880" y="659" width="240" height="180" as="geometry"/>
+        </mxCell>
+        <mxCell id="stock-adjustment-1" value="stock_adjustment_id (PK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="stock-adjustment">
+          <mxGeometry x="0" y="36" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="stock-adjustment-2" value="product SKU (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="stock-adjustment">
+          <mxGeometry x="0" y="60" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="stock-adjustment-3" value="recorded_by user_id (FK)" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="stock-adjustment">
+          <mxGeometry x="0" y="84" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="stock-adjustment-4" value="quantity change" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="stock-adjustment">
+          <mxGeometry x="0" y="108" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="stock-adjustment-5" value="reason code" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="stock-adjustment">
+          <mxGeometry x="0" y="132" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="stock-adjustment-6" value="adjustment date and time" style="fillColor=#FFFFFF;strokeColor=#CBD5E1;fontColor=#203047;fontFamily=Arial;fontSize=13;align=left;spacingLeft=10;" vertex="1" connectable="0" parent="stock-adjustment">
+          <mxGeometry x="0" y="156" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="customer-sale" value="places" style="edgeStyle=none;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="customer" target="sale">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sale-sale-item" value="contains" style="edgeStyle=none;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=ERone;startFill=0;endArrow=ERmandMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="sale" target="sale-item">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="product-sale-item" value="appears on" style="edgeStyle=none;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="product" target="sale-item">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="43" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sale-invoice" value="produces" style="edgeStyle=none;rounded=0;exitX=0.1;exitY=1;entryX=0.5;entryY=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="sale" target="invoice">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="444" y="262"/>
+              <mxPoint x="160" y="262"/>
+            </Array>
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="invoice-payment" value="receives" style="edgeStyle=none;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="invoice" target="payment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="product-stock-adjustment" value="has" style="edgeStyle=none;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="product" target="stock-adjustment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="22" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="product-supplier-delivery" value="received on" style="edgeStyle=none;rounded=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="product" target="supplier-delivery">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="user-sale" value="creates" style="edgeStyle=none;rounded=0;exitX=0.25;exitY=0;entryX=0.25;entryY=1;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="user" target="sale">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-33" y="0" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="user-payment" value="records" style="edgeStyle=none;rounded=0;exitX=0;exitY=0.5;entryX=1;entryY=0.5;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="user" target="payment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="user-stock-adjustment" value="records" style="edgeStyle=none;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=ERone;startFill=0;endArrow=ERzeroToMany;endFill=0;strokeColor=#384B63;strokeWidth=1.5;fontColor=#27384C;fontFamily=Arial;fontSize=13;labelBackgroundColor=#FFFFFF;" edge="1" parent="1" source="user" target="stock-adjustment">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-14" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
